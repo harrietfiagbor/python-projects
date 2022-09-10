@@ -3,8 +3,8 @@ from internet_speed_twitter_bot import InternetSpeedTwitterBot
 
 CHROME_DRIVER_PATH = "C:\Development\chromedriver.exe"
 TWITTER_EMAIL = "codedevelopertest@gmail.com"
-TWITTER_PHONE = "+233278886747"
-TWITTER_PASS = "Perezina33"
+TWITTER_PHONE = os.getenv('PHONE')
+TWITTER_PASS = os.getenv('PASS')
 SPEED_TEST_URL = "https://www.speedtest.net/"
 TWITTER_URL = "https://m.twitter.com/login"
 
