@@ -6,7 +6,7 @@ import smtplib
 GH_LAT = 5.564540
 GH_LONG = -0.225710
 USER = "codedevelopertest@gmail.com"
-PASSWORD = "u&aP(+UYu$808oiZ3"
+PASSWORD = os.getenv('SECRET')
 MAIN_ACCOUNT = "harrietfiagbor@gmail.com"
 
 
