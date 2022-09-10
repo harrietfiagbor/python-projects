@@ -2,7 +2,10 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
+
 chrome_driver_path = "C:\Development\chromedriver.exe"
+PASS = os.getenv('SECRET')
+PHONE = os.getenv('PHONE')
 driver = webdriver.Chrome(chrome_driver_path)
 driver.maximize_window()
 LINKEDIN_URL = "https://www.linkedin.com/jobs/search/?f_LF=f_AL&geoId=102257491&keywords=python%20developer%20" \
@@ -20,7 +23,7 @@ time.sleep(5)
 email_fill = driver.find_element_by_id("username")
 email_fill.send_keys("codedevelopertest@gmail.com")
 password_fill = driver.find_element_by_id("password")
-password_fill.send_keys("f9d-hXzcRZrfyun")
+password_fill.send_keys(PASS)
 password_fill.send_keys(Keys.ENTER)
 
 # jobs = driver.find_element_by_css_selector("li.jobs-search-results__list-item")
@@ -33,7 +36,7 @@ apply_button.click()
 # fill in the phone number
 fill_phone = driver.find_element_by_class_name("fb-single-line-text__input")
 if fill_phone.text == "":
-    fill_phone.send_keys("+233541456317")
+    fill_phone.send_keys(PHONE)
 
 # submit the application
 submit_button_1 = driver.find_element_by_css_selector("footer button")
