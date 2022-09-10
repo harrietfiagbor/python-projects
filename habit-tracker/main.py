@@ -2,7 +2,7 @@ import requests
 import datetime as dt
 
 PIXELA_ENDPOINT = "https://pixe.la/v1/users"
-TOKEN = "Dede3The3Developer3"
+TOKEN = os.getenv('SECRET')
 USERNAME = "harriet"
 GRAPH_ID = "graph1"
 
