@@ -4,7 +4,7 @@ from selenium.webdriver.common.keys import Keys
 
 
 FB_EMAIL = "harriet.fiagbor"
-FB_password = "Perezina33"
+FB_password = os.getenv('PASS')
 
 chrome_driver_path = "C:\Development\chromedriver.exe"
 driver = webdriver.Chrome(chrome_driver_path)
